@@ -38,14 +38,14 @@ public class SceneController : MonoBehaviour
 
 	// This is the main external point of contact and influence from the rest of the project.
 	// This will be called by a SceneReaction when the player wants to switch scenes.
-//	public void FadeAndLoadScene (SceneReaction sceneReaction)
-//	{
-//		// If a fade isn't happening then start fading and switching scenes.
-//		if (!isFading)
-//		{
-//			StartCoroutine (FadeAndSwitchScenes (sceneReaction.sceneName));
-//		}
-//	}
+	public void FadeAndLoadScene (String sceneName)
+	{
+		// If a fade isn't happening then start fading and switching scenes.
+		if (!isFading)
+		{
+			StartCoroutine (FadeAndSwitchScenes (sceneName));
+		}
+	}
 
 
 	// This is the coroutine where the 'building blocks' of the script are put together.

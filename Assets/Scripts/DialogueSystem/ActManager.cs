@@ -28,7 +28,9 @@ public class ActManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown (0)) {
+
+		//check if we are currently supposed to be making a decision
+		if (Input.GetMouseButtonDown (0) && currentAct.isInteractive == false) {
 			DisplayNextAct ();
 		}
 	}
@@ -71,8 +73,9 @@ public class ActManager : MonoBehaviour {
 			//start the Dialogue 
 			StartDialogue (currentAct);
 		}else{
-			Debug.Log ("invoking");
-			currentAct.actorAbs.GetComponent<Actor> ().Invoke (currentAct.function, 0f);
+			foreach (Actors actor in currentAct.actors) {
+				actor.actor.GetComponent<Actor> ().Invoke (actor.function, 0f);
+			}
 
 		}
 
@@ -89,7 +92,7 @@ public class ActManager : MonoBehaviour {
 
 		talking = true;
 
-		Vector3 pos = Camera.main.WorldToScreenPoint (act.actorAbs.transform.position);
+		Vector3 pos = Camera.main.WorldToScreenPoint (act.dialogue.actor.transform.position);
 		dialogueText.transform.position = pos;
 		dialogueText.transform.Translate (Vector3.up * 300, Space.World);
 
@@ -100,7 +103,7 @@ public class ActManager : MonoBehaviour {
 			sentences.Enqueue (sentence);
 		}
 		//start character animation
-		currentActor = act.actor.GetComponent<Actor> ();
+		currentActor = act.dialogue.actor.GetComponent<Actor> ();
 		currentActor.talk ();
 		DisplayNextSentence (currentActor);
 	}
