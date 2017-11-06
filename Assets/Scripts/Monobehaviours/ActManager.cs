@@ -72,6 +72,7 @@ public class ActManager : MonoBehaviour {
 		if(currentAct.isDialogue){
 			//start the Dialogue 
 			StartDialogue (currentAct);
+
 		}else{
 			foreach (Actors actor in currentAct.actors) {
 				actor.actor.GetComponent<Actor> ().Invoke (actor.function, 0f);

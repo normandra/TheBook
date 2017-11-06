@@ -10,13 +10,11 @@ public class Actor : MonoBehaviour {
 	int moveLeftFlipHash = Animator.StringToHash ("moveLeftFlip");
 
 	private SceneController  sc;
-	private ActManager am;
+	public ActManager am;
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
-		sc = FindObjectOfType<SceneController> ();
-		am = FindObjectOfType<ActManager> ();
 	} 
 	
 	public void talk(){
