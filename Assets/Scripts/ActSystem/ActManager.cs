@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.ComponentModel;
 
 public class ActManager : MonoBehaviour {
 
-	public Text dialogueText;
+	private Text dialogueText;
+	public SceneController sc;
+
 	public Actions actions;
 
 	private Queue<Act> acts;
@@ -18,6 +21,7 @@ public class ActManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		sc = FindObjectOfType<SceneController> ();
 		acts = new Queue<Act> ();
 		sentences = new Queue<string> ();
 
@@ -69,9 +73,12 @@ public class ActManager : MonoBehaviour {
 		//set the current act and check if its a dialogue or a transform/anim trigger
 		currentAct = acts.Dequeue ();
 			
-		if(currentAct.isDialogue){
+		if(currentAct.dialogue.sentences.Length > 0 ){
 			//start the Dialogue 
 			StartDialogue (currentAct);
+			foreach (Actors actor in currentAct.actors) {
+				actor.actor.GetComponent<Actor> ().Invoke (actor.function, 0f);
+			}
 
 		}else{
 			foreach (Actors actor in currentAct.actors) {
@@ -93,9 +100,9 @@ public class ActManager : MonoBehaviour {
 
 		talking = true;
 
-		Vector3 pos = Camera.main.WorldToScreenPoint (act.dialogue.actor.transform.position);
-		dialogueText.transform.position = pos;
-		dialogueText.transform.Translate (Vector3.up * 300, Space.World);
+
+		dialogueText = act.dialogue.text;
+		dialogueText.transform.parent.gameObject.SetActive (true);
 
 		sentences.Clear ();
 
@@ -107,6 +114,11 @@ public class ActManager : MonoBehaviour {
 		currentActor = act.dialogue.actor.GetComponent<Actor> ();
 		currentActor.talk ();
 		DisplayNextSentence (currentActor);
+	}
+
+	string replaceName (string input){
+		string regex = "";
+		return input;
 	}
 
 	void DisplayNextSentence (Actor actor)
@@ -127,6 +139,7 @@ public class ActManager : MonoBehaviour {
 		StopAllCoroutines ();
 		dialogueText.text = "";
 		actor.idle ();
+		dialogueText.transform.parent.gameObject.SetActive (false);
 		talking = false;
 	}
 

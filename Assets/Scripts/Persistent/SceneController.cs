@@ -14,10 +14,12 @@ public class SceneController : MonoBehaviour
 	public event Action BeforeSceneUnload;          // Event delegate that is called just before a scene is unloaded.
 	public event Action AfterSceneLoad;             // Event delegate that is called just after a scene is loaded.
 
+	public bool isMale;
+	public string name;
 
 	public CanvasGroup faderCanvasGroup;            // The CanvasGroup that controls the Image used for fading to black.
 	public float fadeDuration = 1f;                 // How long it should take to fade to and from black.
-	public string startingSceneName = "SecurityRoom";
+	public string startingSceneName = "Introduction";
 	// The name of the scene that should be loaded first.
 
 	private bool isFading;                          // Flag used to determine if the Image is currently fading to or from black.

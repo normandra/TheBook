@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: backgrounds
+    uniqueID: 221547043
+    locked: 0
+  - name: characters
+    uniqueID: 3014786817
+    locked: 0
+  - name: foreground
+    uniqueID: 1282185887
+    locked: 0
+  - name: Messages
+    uniqueID: 1903610759
+    locked: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class Actors {
@@ -12,6 +13,7 @@ public class Actors {
 public class Dialogue {
 
 	public GameObject actor;
+	public Text text;
 
 	[TextArea(3, 10)]
 	public string[] sentences;
@@ -21,19 +23,8 @@ public class Dialogue {
 [System.Serializable]
 public class Act {
 
-	public bool isDialogue;
 	public bool isInteractive;
 	public Dialogue dialogue;
 	public Actors[] actors;
-
-//	class Dialogue {
-//
-//		public string name;
-//
-//		[TextArea(3, 10)]
-//		public string[] sentences;
-//
-//	}
-
 
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Actor : MonoBehaviour {
 
@@ -11,11 +12,20 @@ public class Actor : MonoBehaviour {
 
 	private SceneController  sc;
 	public ActManager am;
+	private InputField input;
+
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
+		input = GetComponent<InputField> ();
 	} 
+
+	public void setName(){
+		am.sc.name = input.text;
+		am.DisplayNextAct ();
+		Disable ();
+	}
 	
 	public void talk(){
 		anim.SetTrigger (talkHash);
