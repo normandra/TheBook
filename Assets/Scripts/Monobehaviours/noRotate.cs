@@ -8,7 +8,7 @@ public class noRotate : MonoBehaviour {
 	private Quaternion rotation;
 
 	void Awake(){
-		rotation = transform.rotation;
+		rotation = Quaternion.Euler (0,0,0);
 	}
 
 	void LateUpdate(){

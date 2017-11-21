@@ -15,11 +15,12 @@ public class SceneController : MonoBehaviour
 	public event Action AfterSceneLoad;             // Event delegate that is called just after a scene is loaded.
 
 	public bool isMale;
-	public string name;
+	public string playerName;
+	public string donkeyName;
 
 	public CanvasGroup faderCanvasGroup;            // The CanvasGroup that controls the Image used for fading to black.
 	public float fadeDuration = 1f;                 // How long it should take to fade to and from black.
-	public string startingSceneName = "Introduction";
+	public string startingSceneName = "";
 	// The name of the scene that should be loaded first.
 
 	private bool isFading;                          // Flag used to determine if the Image is currently fading to or from black.

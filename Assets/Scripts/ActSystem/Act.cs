@@ -6,7 +6,9 @@ using UnityEngine.UI;
 [System.Serializable]
 public class Actors {
 	public GameObject actor;
-	public string function;
+	public string param;
+	public bool isFunction;
+
 }
 
 [System.Serializable]

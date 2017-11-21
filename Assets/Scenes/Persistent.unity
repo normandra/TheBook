@@ -194,8 +194,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 188996543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 528, y: 290.5, z: 0}
-  m_LocalScale: {x: 0.55, y: 0.55, z: 0.55}
+  m_LocalPosition: {x: 477.5, y: 290.5, z: 0}
+  m_LocalScale: {x: 0.49739584, y: 0.49739584, z: 0.49739584}
   m_Children:
   - {fileID: 247254507}
   m_Father: {fileID: 0}
@@ -489,9 +489,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7a21ec8fddecc45be970bc3fc651f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMale: 0
+  playerName: 
+  donkeyName: 
   faderCanvasGroup: {fileID: 247254510}
   fadeDuration: 1
-  startingSceneName: Introduction
+  startingSceneName: CharacterCreation
 --- !u!81 &1719667741
 AudioListener:
   m_ObjectHideFlags: 0

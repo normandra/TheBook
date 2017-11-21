@@ -18,6 +18,8 @@ public class ActManager : MonoBehaviour {
 	private Actor currentActor;
 
 	private bool talking;
+	public bool animating;
+	private bool cor;
 
 	// Use this for initialization
 	void Start () {
@@ -26,15 +28,19 @@ public class ActManager : MonoBehaviour {
 		sentences = new Queue<string> ();
 
 		talking = false;
+		cor = false;
 
 		StartAct (actions);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
+
 		//check if we are currently supposed to be making a decision
-		if (Input.GetMouseButtonDown (0) && currentAct.isInteractive == false) {
+
+
+		if (Input.GetMouseButtonDown (0) && currentAct.isInteractive == false && cor == false) {
 			DisplayNextAct ();
 		}
 	}
@@ -63,7 +69,7 @@ public class ActManager : MonoBehaviour {
 			EndDialogue (currentActor);
 		}
 
-			
+
 		//check if we still have an act
 		if(acts.Count == 0){
 			EndAct ();
@@ -72,17 +78,32 @@ public class ActManager : MonoBehaviour {
 
 		//set the current act and check if its a dialogue or a transform/anim trigger
 		currentAct = acts.Dequeue ();
-			
+
 		if(currentAct.dialogue.sentences.Length > 0 ){
 			//start the Dialogue 
 			StartDialogue (currentAct);
 			foreach (Actors actor in currentAct.actors) {
-				actor.actor.GetComponent<Actor> ().Invoke (actor.function, 0f);
+
+				Actor a = actor.actor.GetComponent<Actor> ();
+
+				if(actor.isFunction){
+					a.Invoke (actor.param, 0f);
+				}else{
+					a.setAnimation (actor.param);
+					StartCoroutine (IsPlaying (a));
+				}
 			}
 
 		}else{
 			foreach (Actors actor in currentAct.actors) {
-				actor.actor.GetComponent<Actor> ().Invoke (actor.function, 0f);
+
+				Actor a = actor.actor.GetComponent<Actor> ();
+
+				if(actor.isFunction){
+					a.Invoke (actor.param, 0f);
+				}else{
+					a.setAnimation (actor.param);
+				}
 			}
 
 		}
@@ -90,7 +111,7 @@ public class ActManager : MonoBehaviour {
 	}
 
 	void EndAct() {
-		
+
 	}
 
 	//DialogueSystem------------------------------------------------------------------
@@ -129,7 +150,6 @@ public class ActManager : MonoBehaviour {
 		}
 
 		string sentence = sentences.Dequeue ();
-		StopAllCoroutines ();
 		StartCoroutine (TypeSentence (sentence));
 	}
 
@@ -145,12 +165,22 @@ public class ActManager : MonoBehaviour {
 
 	IEnumerator TypeSentence (string sentence)
 	{
+		cor = true;
 		dialogueText.text = "";
 		foreach (char letter in sentence.ToCharArray())
 		{
 			dialogueText.text += letter;
 			yield return null;
 		}
+
+		cor = false;
 	}
 
+	IEnumerator IsPlaying (Actor c){
+		cor = true;
+		while(!c.anim.GetCurrentAnimatorStateInfo (0).IsName ("Idle")){
+			yield return null;
+		}
+		cor = false;
+	}
 }
