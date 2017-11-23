@@ -9,8 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Persistent.unity
     guid: 3590b50c371eb53429802c529fed8837
   - enabled: 1
-    path: Assets/Scenes/Introduction.unity
+    path: Assets/Scenes/Germany.unity
     guid: 73a1f663b9b561342a2392bce9b17379
   - enabled: 1
     path: Assets/Scenes/CharacterCreation.unity
     guid: 8ddcc733bb7bd5c4db13c828d03697da
+  - enabled: 1
+    path: Assets/Scenes/MapGerSwitz.unity
+    guid: c31747ab8b2044826a0249e24b4d74d9
+  - enabled: 1
+    path: Assets/Scenes/Switzerland 1.unity
+    guid: 4fe908d07e6f02d4a80d1ed1d7fc15d7

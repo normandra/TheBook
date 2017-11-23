@@ -38,6 +38,10 @@ public class Actor : MonoBehaviour {
 		anim.SetTrigger ("Idle");
 	}
 
+	public void changeToMapGS(){
+		am.sc.FadeAndLoadScene ("Switzerland 1");
+	}
+
 
 }
 
