@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class Actors {
 	public GameObject actor;
 	public string param;
-	public bool isFunction;
+	public float duration;
+	public bool isNotAnimation;
 
 }
 

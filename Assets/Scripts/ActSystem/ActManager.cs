@@ -18,11 +18,11 @@ public class ActManager : MonoBehaviour {
 	private Actor currentActor;
 
 	private bool talking;
-	public bool animating;
 	private bool cor;
 
 	// Use this for initialization
 	void Start () {
+		Application.targetFrameRate = 60;
 		sc = FindObjectOfType<SceneController> ();
 		acts = new Queue<Act> ();
 		sentences = new Queue<string> ();
@@ -78,6 +78,7 @@ public class ActManager : MonoBehaviour {
 
 		//set the current act and check if its a dialogue or a transform/anim trigger
 		currentAct = acts.Dequeue ();
+		float AnimationDuration = 0f;
 
 		if(currentAct.dialogue.sentences.Length > 0 ){
 			//start the Dialogue 
@@ -86,12 +87,17 @@ public class ActManager : MonoBehaviour {
 
 				Actor a = actor.actor.GetComponent<Actor> ();
 
-				if(actor.isFunction){
+				if(actor.isNotAnimation){
 					a.Invoke (actor.param, 0f);
 				}else{
 					a.setAnimation (actor.param);
-					StartCoroutine (IsPlaying (a));
+					if(actor.duration > AnimationDuration){
+						AnimationDuration = actor.duration;
+					}
 				}
+			}
+			if(AnimationDuration > 0f){
+				this.Invoke ("DisplayNextAct", AnimationDuration);
 			}
 
 		}else{
@@ -99,14 +105,21 @@ public class ActManager : MonoBehaviour {
 
 				Actor a = actor.actor.GetComponent<Actor> ();
 
-				if(actor.isFunction){
+				if(actor.isNotAnimation){
 					a.Invoke (actor.param, 0f);
 				}else{
 					a.setAnimation (actor.param);
+					if(actor.duration > AnimationDuration){
+						AnimationDuration = actor.duration;
+					}
 				}
 			}
-
+			if(AnimationDuration > 0f){
+				this.Invoke ("DisplayNextAct", AnimationDuration);
+			}
 		}
+
+
 
 	}
 
@@ -173,14 +186,6 @@ public class ActManager : MonoBehaviour {
 			yield return null;
 		}
 
-		cor = false;
-	}
-
-	IEnumerator IsPlaying (Actor c){
-		cor = true;
-		while(!c.anim.GetCurrentAnimatorStateInfo (0).IsName ("Idle")){
-			yield return null;
-		}
 		cor = false;
 	}
 }
