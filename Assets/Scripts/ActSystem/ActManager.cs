@@ -45,6 +45,10 @@ public class ActManager : MonoBehaviour {
 		}
 	}
 
+	private void displayClickAble(){
+		
+	}
+
 	public void StartAct (Actions actions) {
 		//empty our acts que and set it to the current active
 		acts.Clear ();
