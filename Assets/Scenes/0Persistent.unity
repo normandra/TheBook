@@ -194,8 +194,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 188996543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 653, y: 281, z: 0}
-  m_LocalScale: {x: 0.6802083, y: 0.6802083, z: 0.6802083}
+  m_LocalPosition: {x: 564.5, y: 317.5, z: 0}
+  m_LocalScale: {x: 0.58802086, y: 0.58802086, z: 0.58802086}
   m_Children:
   - {fileID: 247254507}
   m_Father: {fileID: 0}
@@ -231,7 +231,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 247254506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00012207031, y: 0.000030517578, z: 0}
+  m_LocalPosition: {x: 0.00012207031, y: 0.000061035156, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 188996547}
@@ -489,12 +489,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7a21ec8fddecc45be970bc3fc651f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMale: 0
-  playerName: 
-  donkeyName: 
+  gender: 
+  playerName: Norman
+  donkeyName: Danky
   faderCanvasGroup: {fileID: 247254510}
   fadeDuration: 1
-  startingSceneName: Germany
+  startingSceneName: 1CharacterCreation
 --- !u!81 &1719667741
 AudioListener:
   m_ObjectHideFlags: 0

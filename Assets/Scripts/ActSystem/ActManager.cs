@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.ComponentModel;
+using System.Text.RegularExpressions;
 
 public class ActManager : MonoBehaviour {
+
+	public Text contText;
 
 	private Text dialogueText;
 	public SceneController sc;
@@ -20,10 +23,16 @@ public class ActManager : MonoBehaviour {
 	private bool talking;
 	private bool cor;
 
+	private Regex yourRegex;
+
+
+	void Awake (){
+		sc = FindObjectOfType<SceneController> ();
+	}
+
 	// Use this for initialization
 	void Start () {
 		Application.targetFrameRate = 60;
-		sc = FindObjectOfType<SceneController> ();
 		acts = new Queue<Act> ();
 		sentences = new Queue<string> ();
 
@@ -38,11 +47,17 @@ public class ActManager : MonoBehaviour {
 
 
 		//check if we are currently supposed to be making a decision
-
-
-		if (Input.GetMouseButtonDown (0) && currentAct.isInteractive == false && cor == false) {
-			DisplayNextAct ();
+		if(currentAct.isInteractive == false && cor == false){
+			contText.gameObject.SetActive (true);
+			if (Input.GetMouseButtonDown (0)) {
+				DisplayNextAct ();
+			}
+		}else{
+			contText.gameObject.SetActive (false);
 		}
+
+
+
 	}
 
 	private void displayClickAble(){
@@ -155,8 +170,10 @@ public class ActManager : MonoBehaviour {
 	}
 
 	string replaceName (string input){
-		string regex = "";
-		return input;
+		yourRegex = new Regex(@"\{([^\}]+)\}");
+		input = yourRegex.Replace (input,sc.playerName);
+		yourRegex = new Regex (@"\[[^]]*\]");
+		return yourRegex.Replace (input,sc.donkeyName);
 	}
 
 	void DisplayNextSentence (Actor actor)
@@ -166,7 +183,8 @@ public class ActManager : MonoBehaviour {
 			return;
 		}
 
-		string sentence = sentences.Dequeue ();
+		string sentence = replaceName(sentences.Dequeue ());
+
 		StartCoroutine (TypeSentence (sentence));
 	}
 

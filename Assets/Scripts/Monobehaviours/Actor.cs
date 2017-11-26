@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.Rendering;
 
 public class Actor : MonoBehaviour {
 
@@ -39,7 +40,19 @@ public class Actor : MonoBehaviour {
 	}
 
 	public void changeToMapGS(){
-		am.sc.FadeAndLoadScene ("Switzerland 1");
+		am.sc.FadeAndLoadScene ("3MapGerSwitz");
+	}
+
+	public void changeToGermany(){
+		am.sc.FadeAndLoadScene ("2Germany");
+	}
+
+	public void goToSwFr(){
+		am.sc.FadeAndLoadScene("4SwitzForest");
+	}
+
+	public void goToHouse(){
+		am.sc.FadeAndLoadScene ("5SwissHouse");
 	}
 
 

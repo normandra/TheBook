@@ -14,7 +14,7 @@ public class SceneController : MonoBehaviour
 	public event Action BeforeSceneUnload;          // Event delegate that is called just before a scene is unloaded.
 	public event Action AfterSceneLoad;             // Event delegate that is called just after a scene is loaded.
 
-	public bool isMale;
+	public string gender;
 	public string playerName;
 	public string donkeyName;
 
