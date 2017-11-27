@@ -178,14 +178,16 @@ public class ActManager : MonoBehaviour {
 
 	void DisplayNextSentence (Actor actor)
 	{
+	
+		dialogueText.transform.parent.gameObject.SetActive (false);
 		if (sentences.Count == 0){
 			EndDialogue (actor);
 			return;
 		}
-
+		dialogueText.transform.parent.gameObject.SetActive (true);
 		string sentence = replaceName(sentences.Dequeue ());
-
-		StartCoroutine (TypeSentence (sentence));
+		dialogueText.text = sentence;
+		//StartCoroutine (TypeSentence (sentence));
 	}
 
 

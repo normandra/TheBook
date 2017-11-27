@@ -494,7 +494,7 @@ MonoBehaviour:
   donkeyName: Danky
   faderCanvasGroup: {fileID: 247254510}
   fadeDuration: 1
-  startingSceneName: 1CharacterCreation
+  startingSceneName: 6SwissOutdoor
 --- !u!81 &1719667741
 AudioListener:
   m_ObjectHideFlags: 0
