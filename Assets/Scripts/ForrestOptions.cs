@@ -17,10 +17,12 @@ public class ForrestOptions : MonoBehaviour {
 	}
 
 	public void changeToRunForrest(){
+		am.sc.decision = 1;
 		am.sc.FadeAndLoadScene ("4SwitzForrestRun");
 	}
 
 	public void stay(){
+		am.sc.decision = 0;
 		am.DisplayNextAct ();
 	}
 
