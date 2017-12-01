@@ -17,6 +17,7 @@ public class SceneController : MonoBehaviour
 	public string gender;
 	public string playerName;
 	public string donkeyName;
+	public int decision;
 
 	public CanvasGroup faderCanvasGroup;            // The CanvasGroup that controls the Image used for fading to black.
 	public float fadeDuration = 1f;                 // How long it should take to fade to and from black.

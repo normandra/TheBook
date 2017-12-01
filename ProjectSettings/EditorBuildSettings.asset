@@ -29,3 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/6SwissOutdoor.unity
     guid: 53b208ff5a1534f468fd9a1d378a0d9c
+  - enabled: 1
+    path: Assets/Scenes/7ValleyScene.unity
+    guid: de8f6cf6a2cb8ba4abd960ec98daeda6
+  - enabled: 1
+    path: Assets/Scenes/8Final.unity
+    guid: 41fa4c4cf4bc01c40966067319ad0af9
