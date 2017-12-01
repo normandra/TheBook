@@ -55,6 +55,10 @@ public class Actor : MonoBehaviour {
 		am.sc.FadeAndLoadScene ("5SwissHouse");
 	}
 
+	public void goToHouseOutside(){
+		am.sc.FadeAndLoadScene ("6SwissOutdoor");
+	}
+
 	public void goToValleyScene(){
 		am.sc.FadeAndLoadScene ("7ValleyScene");
 	}
