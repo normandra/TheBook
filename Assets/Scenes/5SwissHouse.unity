@@ -153,11 +153,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4213476230753820, guid: 8359ae9488a61154d84bb4a59261e19c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.104
+      value: 0.016570568
       objectReference: {fileID: 0}
     - target: {fileID: 4213476230753820, guid: 8359ae9488a61154d84bb4a59261e19c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.008
+      value: 0.061469078
       objectReference: {fileID: 0}
     - target: {fileID: 4213476230753820, guid: 8359ae9488a61154d84bb4a59261e19c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -182,14 +182,6 @@ Prefab:
     - target: {fileID: 4213476230753820, guid: 8359ae9488a61154d84bb4a59261e19c, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4213476230753820, guid: 8359ae9488a61154d84bb4a59261e19c, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.5103368
-      objectReference: {fileID: 0}
-    - target: {fileID: 4213476230753820, guid: 8359ae9488a61154d84bb4a59261e19c, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.2526546
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8359ae9488a61154d84bb4a59261e19c, type: 2}
@@ -399,11 +391,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   am: {fileID: 1949804131}
   daughter: {fileID: 21300000, guid: 2ce153e0edd3f9741990be7c0ba6afc9, type: 3}
---- !u!1 &1131704162 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1902756006317306, guid: dfecaf2c8b13ca348ae9bf19924da180,
-    type: 2}
-  m_PrefabInternal: {fileID: 1131704158}
 --- !u!1001 &1574806509
 Prefab:
   m_ObjectHideFlags: 0
@@ -599,12 +586,12 @@ Prefab:
     - target: {fileID: 224394796835360550, guid: 8ac28a1dd07be094d8ba25a3ad9f7514,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 519
+      value: 564.5
       objectReference: {fileID: 0}
     - target: {fileID: 224394796835360550, guid: 8ac28a1dd07be094d8ba25a3ad9f7514,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 292
+      value: 317.5
       objectReference: {fileID: 0}
     - target: {fileID: 224394796835360550, guid: 8ac28a1dd07be094d8ba25a3ad9f7514,
         type: 2}
@@ -803,11 +790,6 @@ Prefab:
     - target: {fileID: 114996052506216890, guid: 792637cb039129a49b30cdf0713d2a69,
         type: 2}
       propertyPath: actions.acts.Array.data[7].actors.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114996052506216890, guid: 792637cb039129a49b30cdf0713d2a69,
-        type: 2}
-      propertyPath: actions.acts.Array.data[8].actors.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114996052506216890, guid: 792637cb039129a49b30cdf0713d2a69,
@@ -1030,33 +1012,13 @@ Prefab:
     - target: {fileID: 114996052506216890, guid: 792637cb039129a49b30cdf0713d2a69,
         type: 2}
       propertyPath: actions.acts.Array.data[7].isInteractive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114996052506216890, guid: 792637cb039129a49b30cdf0713d2a69,
         type: 2}
       propertyPath: contText
       value: 
       objectReference: {fileID: 1861358756}
-    - target: {fileID: 114996052506216890, guid: 792637cb039129a49b30cdf0713d2a69,
-        type: 2}
-      propertyPath: actions.acts.Array.data[8].actors.Array.data[0].actor
-      value: 
-      objectReference: {fileID: 1131704162}
-    - target: {fileID: 114996052506216890, guid: 792637cb039129a49b30cdf0713d2a69,
-        type: 2}
-      propertyPath: actions.acts.Array.data[8].actors.Array.data[0].param
-      value: goToHouseOutside
-      objectReference: {fileID: 0}
-    - target: {fileID: 114996052506216890, guid: 792637cb039129a49b30cdf0713d2a69,
-        type: 2}
-      propertyPath: actions.acts.Array.data[8].actors.Array.data[0].duration
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114996052506216890, guid: 792637cb039129a49b30cdf0713d2a69,
-        type: 2}
-      propertyPath: actions.acts.Array.data[8].actors.Array.data[0].isNotAnimation
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 792637cb039129a49b30cdf0713d2a69, type: 2}
   m_IsPrefabParent: 0
