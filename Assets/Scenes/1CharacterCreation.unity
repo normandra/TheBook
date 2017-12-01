@@ -1164,9 +1164,9 @@ Prefab:
     - target: {fileID: 114996052506216890, guid: 792637cb039129a49b30cdf0713d2a69,
         type: 2}
       propertyPath: actions.acts.Array.data[4].dialogue.sentences.Array.data[0]
-      value: "Together, they travelled around the world for Mr. Bertuch\u2019s Child
-        Image Book. What I am going to tell you now, is that child\u2019s very first
-        trip. It all starts from his home, Germany. "
+      value: "Together with Danky, they travelled around the world for Mr. Bertuch\u2019s
+        Child Image Book. What I am going to tell you now, is that child\u2019s very
+        first trip. It all starts from his home, Germany. "
       objectReference: {fileID: 0}
     - target: {fileID: 114996052506216890, guid: 792637cb039129a49b30cdf0713d2a69,
         type: 2}
@@ -2319,22 +2319,22 @@ Prefab:
     - target: {fileID: 224701621904779560, guid: 8ac28a1dd07be094d8ba25a3ad9f7514,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 792.5
+      value: 786
       objectReference: {fileID: 0}
     - target: {fileID: 224701621904779560, guid: 8ac28a1dd07be094d8ba25a3ad9f7514,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -477.7
+      value: -464
       objectReference: {fileID: 0}
     - target: {fileID: 224701621904779560, guid: 8ac28a1dd07be094d8ba25a3ad9f7514,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 792.5
+      value: 786
       objectReference: {fileID: 0}
     - target: {fileID: 224701621904779560, guid: 8ac28a1dd07be094d8ba25a3ad9f7514,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -477.7
+      value: -464
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ac28a1dd07be094d8ba25a3ad9f7514, type: 2}

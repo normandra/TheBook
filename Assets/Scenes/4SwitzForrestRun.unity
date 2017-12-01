@@ -2418,22 +2418,22 @@ Prefab:
     - target: {fileID: 224701621904779560, guid: 8ac28a1dd07be094d8ba25a3ad9f7514,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -472
+      value: -470
       objectReference: {fileID: 0}
     - target: {fileID: 224701621904779560, guid: 8ac28a1dd07be094d8ba25a3ad9f7514,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -472
+      value: -470
       objectReference: {fileID: 0}
     - target: {fileID: 224701621904779560, guid: 8ac28a1dd07be094d8ba25a3ad9f7514,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 778
+      value: 789
       objectReference: {fileID: 0}
     - target: {fileID: 224701621904779560, guid: 8ac28a1dd07be094d8ba25a3ad9f7514,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 778
+      value: 789
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ac28a1dd07be094d8ba25a3ad9f7514, type: 2}

@@ -194,8 +194,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 188996543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 579, y: 318.5, z: 0}
-  m_LocalScale: {x: 0.603125, y: 0.603125, z: 0.603125}
+  m_LocalPosition: {x: 877.5, y: 493.5, z: 0}
+  m_LocalScale: {x: 0.9140625, y: 0.9140625, z: 0.9140625}
   m_Children:
   - {fileID: 247254507}
   m_Father: {fileID: 0}
@@ -495,7 +495,7 @@ MonoBehaviour:
   decision: 0
   faderCanvasGroup: {fileID: 247254510}
   fadeDuration: 1
-  startingSceneName: 1CharacterCreation
+  startingSceneName: 5SwissHouse
 --- !u!81 &1719667741
 AudioListener:
   m_ObjectHideFlags: 0
