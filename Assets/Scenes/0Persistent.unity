@@ -495,7 +495,7 @@ MonoBehaviour:
   decision: 0
   faderCanvasGroup: {fileID: 247254510}
   fadeDuration: 1
-  startingSceneName: 5SwissHouse
+  startingSceneName: 1CharacterCreation
 --- !u!81 &1719667741
 AudioListener:
   m_ObjectHideFlags: 0
